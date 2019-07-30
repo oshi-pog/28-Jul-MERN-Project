@@ -7,7 +7,9 @@ const db = config.get('mongoURI');
 //Using async and await to make it look synchronous even though it is asyncronous
 const connectDB = async () => {
     try {
-        await mongoose.connect(db);
+        await mongoose.connect(db, {
+            useNewUrlParser:true
+        });
 
         console.log('MongoDB Connected...');
     } catch(err) {
