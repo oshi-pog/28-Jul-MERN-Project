@@ -23,4 +23,5 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
+// mongoose Schema created for users, template of what a user will look like with required fields, exported as a module, using mongooses function to model the schema
 module.exports = User = mongoose.model('User', UserSchema);
